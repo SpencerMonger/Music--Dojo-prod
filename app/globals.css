@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add smooth transitions for background changes */
+.background-transition {
+  transition: all 2s ease-in-out;
+}
+
+/* Slow down background GIF animation */
+.background-gif {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  animation-name: gif-slowdown;
+  animation-duration: 75s;  /* Adjust this value to control speed */
+  animation-timing-function: steps(100);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gif-slowdown {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+/* Add custom styles for music player transitions */
+.music-player-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border-radius: 1rem; /* 16px rounded edges */
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /* heavy shadow */
+}
+
+/* Add collapsing animation for content */
+.collapsible-content {
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 800px; /* Adjust this value based on your content */
+  overflow: hidden;
+}
+
+.collapsible-content.collapsed {
+  max-height: 0;
+}
+
+.music-player-mini {
+  width: 225px;
+  height: auto;
+  transform-origin: top left;
+  z-index: 50;
+  padding: 8px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+
+.music-player-mini img {
+  width: 120px !important;
+  height: 120px !important;
+  margin-bottom: 4px !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important; /* medium shadow */
+  border-radius: 0.5rem !important; /* 8px rounded edges */
+}
+
+.music-player-mini .title-container {
+  margin-top: 2px;
+  max-width: 180px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.music-player-mini .title-text {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Add smooth drag movement */
+.dragging {
+  transition: none !important; /* Disable transition during drag for smoother movement */
+  cursor: grabbing !important;
+}
+
+/* Add any custom styles below */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+  }
+} 
+

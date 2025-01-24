@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS system files
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Terraform directories and files
+terraform/
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Vercel build output
+.vercel/
+
+# Other build outputs
+out/
+
+# Coverage directory used by testing tools
+coverage/
+
+# Temporary files
+*.tmp
+*.swp
+
+
